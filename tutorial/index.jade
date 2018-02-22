@@ -1,0 +1,70 @@
+.chapter(data-title='Your New Viewsaurus Tutorial')
+  .step(data-title='Setup', data-file='README.md', data-highlight='8-13')
+    :markdown
+      # Setup
+
+      Firstly, clone this project from github
+
+      ```
+      $ git clone https://github.com/embbnux/ringcentral-oauth-implicit-demo.git
+      $ cd ringcentral-oauth-implicit-demo
+      ```
+
+  .step(data-title='Configure the app appropriately', data-file='public/config-sample.js')
+    :markdown
+      ## Configuration
+
+      Edit the `./public/config.js` file to configure your client ID and redirect URL, etc.
+
+      ```
+      $ cd ./public
+      $ cp config-sample.js config.js
+      $ vi config.js
+      ```
+
+      Please visit [Developer Portal](http://developer.ringcentral.com/) to apply client ID. And ensure the redirect URI in your config file has been entered in your app configuration. By default, the URL is set to the following for this demo:
+
+      ```
+      http://localhost:8080/callback.html
+      ```
+
+  .step(data-title='Serve Static files', data-file='README.md', data-highlight='33-46')
+    :markdown
+      ## Serve Static files
+
+      Serve the static page with `http-server`.
+
+      ```
+      $ npm install -g http-server
+      $ http-server public
+      ```
+
+  .step(data-title='Include JavaScript files into HTML file', data-file='public/index.html', data-highlight='4-8')
+    p Include the config file, RingCentral SDK and related libraries into HTML file.
+
+  .step(data-title='Create RingCentral SDK instance', data-file='public/index.html', data-highlight='90-93')
+    p Create RingCentral SDK instance.
+
+  .step(data-title='Get login URL', data-file='public/index.html', data-highlight='13-19,21')
+    p Get login URL from RingCentral SDK instance.
+
+  .step(data-title='Open login window', data-file='public/index.html', data-highlight='22-26')
+    p Open a new window with the login URL.
+
+  .step(data-title='Get token from callback URL', data-file='public/index.html', data-highlight='33-39')
+    :markdown
+      When login finished, popup-window will redirect to the callback URL(the configured redirect URL). The callback URL contains the `access_token` that used to require RingCentral Platform API.
+
+  .step(data-title='Refresh Token', data-file='public/index.html', data-highlight='51-57')
+    :markdown
+      Now we get this access token, but it will expire in one hour.
+
+      We can refresh the token seamlessly with a hidden iframe using browser session.
+
+      The browser session will expire in half hour, so we can to refresh token every 15 minites to keep it alive.
+
+  .step(data-title='Update Refresh Token', data-file='public/index.html', data-highlight='65-73')
+    :markdown
+      When refreshing finished, iframe will redirect to the callback URL(the configured redirect URL). The callback URL contains the new `access_token`. We need to update old access token with new token.
+
+

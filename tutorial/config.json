@@ -1,0 +1,6 @@
+{
+    "title": "Learn RingCentral OAuth Implicit grant flow in JavaScript",
+    "repo": "embbnux/ringcentral-oauth-implicit-demo",
+    "description": "A step by step tutorial to get you started with RingCentral OAuth Implicit grant flow in JavaScript.",
+    "heroku": false
+}
