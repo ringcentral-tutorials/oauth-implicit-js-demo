@@ -7,7 +7,7 @@
 
       ```
       $ git clone https://github.com/ringcentral-tutorials/oauth-implicit-js-demo.git
-      $ cd ringcentral-oauth-implicit-demo
+      $ cd oauth-implicit-js-demo
       ```
 
   .step(data-title='Configure the app appropriately', data-file='public/config-sample.js')
@@ -63,8 +63,6 @@
 
       The browser session will expire in half hour, so we can to refresh token every 15 minites to keep it alive.
 
-  .step(data-title='Update Refresh Token', data-file='public/index.html', data-highlight='65-73')
+  .step(data-title='Update Token', data-file='public/index.html', data-highlight='65-73')
     :markdown
       When refreshing finished, iframe will redirect to the callback URL(the configured redirect URL). The callback URL contains the new `access_token`. We need to update old access token with new token.
-
-
