@@ -8,8 +8,8 @@ This is a quick 3-legged OAuth implicit grant flow demo that runs using client-s
 ## Installation
 
 ```bash
-$ git clone https://github.com/embbnux/ringcentral-oauth-implicit-demo.git
-cd ringcentral-oauth-implicit-demo
+$ git clone https://github.com/ringcentral-tutorials/oauth-implicit-js-demo.git
+cd oauth-implicit-js-demo
 ```
 
 ## Configuration
