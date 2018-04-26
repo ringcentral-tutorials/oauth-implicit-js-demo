@@ -45,4 +45,4 @@ Go to the URL:
 http://localhost:8080
 ```
 
-Then click the `Login with RingCentral` button to authorize the demo app and view the access token. Click the `Refresh Token` button to refresh the access token.
+Then click the `Login with RingCentral` button to authorize the demo app and view the access token. Click the `Renew Access Token` button to renew the access token.
